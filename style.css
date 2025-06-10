@@ -96,3 +96,132 @@ h1 {
   color: #555;
   margin-top: 10px;
 }
+
+/* Shop Styles */
+.corner-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #FF6B6B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  width: 600px;
+}
+
+.skin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.skin-item {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skin-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skin-item p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.buy-skin-btn, .select-skin-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-skin-btn {
+  background-color: #7FDBFF;
+  color: white;
+}
+
+.buy-skin-btn:hover {
+  background-color: #39CCCC;
+}
+
+.buy-skin-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.select-skin-btn {
+  background-color: #2ECC40;
+  color: white;
+}
+
+.select-skin-btn.active {
+  background-color: #FF6B6B;
+}
+
+#close-shop {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#achievements{
+  margin-top:30px;
+  text-align:center;
+}
+
+#achievements-list p{
+  display:inline-block;
+  background:#ffeaa7;
+  color:#333;
+  padding:6px 12px;
+  border-radius:8px;
+  margin:4px;
+  font-weight:bold;
+}
+
+/* kleiner Effekt für kritische Klicks (optional) */
+#gandon-button.crit img{
+  filter:drop-shadow(0 0 10px gold);
+  transform:scale(1.4);
+  transition:transform .2s;
+}

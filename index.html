@@ -7,23 +7,69 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="shop-button" class="corner-button">Shop</button>
+
+  <!----- Shop-Modal (unverändert) ----->
+  <div id="shop-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Gandon-Shop</h2>
+      <div class="skin-grid">
+        <!-- bereits vorhandene Skin-Items ... -->
+        <div class="skin-item" data-skin="default">
+          <img src="https://i.ibb.co/nq7cksLC/gandon.webp" alt="Standard-Gandon">
+          <p>Standard-Gandon</p>
+          <button class="select-skin-btn active" data-skin="default">Ausgewählt</button>
+        </div>
+        <div class="skin-item" data-skin="neger">
+          <img src="https://i.ibb.co/XZx0ftGV/IMG-7542.png" alt="Neger-Gandon">
+          <p>Neger-Gandon</p>
+          <button class="buy-skin-btn" data-skin="neger" data-price="150">Kaufen (150)</button>
+        </div>
+        <div class="skin-item" data-skin="karotten">
+          <img src="https://i.ibb.co/8g59HTd7/IMG-7543.png" alt="Karotten-Gandon">
+          <p>Karotten-Gandon</p>
+          <button class="buy-skin-btn" data-skin="karotten" data-price="150">Kaufen (150)</button>
+        </div>
+        <div class="skin-item" data-skin="diabetes">
+          <img src="https://i.ibb.co/d0s4V3qD/IMG-7544.png" alt="Diabetes-Gandon">
+          <p>Diabetes-Gandon</p>
+          <button class="buy-skin-btn" data-skin="diabetes" data-price="150">Kaufen (150)</button>
+        </div>
+      </div>
+      <button id="close-shop">Schließen</button>
+    </div>
+  </div>
+
   <h1>Gandon Clicker</h1>
   <div id="counter">Gandons: 0</div>
+
   <button id="gandon-button">
     <img src="https://i.ibb.co/nq7cksLC/gandon.webp" alt="Gandon">
   </button>
+
   <div id="upgrades">
     <button id="auto-upgrade" class="upgrade-button">
-      Auto-Gandon-Generator Level 1 (Kosten: 50 Gandons)
+      Auto-Gandon-Generator Level&nbsp;1 (Kosten: 50 Gandons)
     </button>
     <button id="pep-upgrade" class="upgrade-button">
       Pep-Line Boost (Kosten: 100 Gandons)
     </button>
   </div>
-  <div id="boost-timer" class="hidden">Boost aktiv: <span id="timer-value">60</span> Sekunden</div>
+
+  <div id="boost-timer" class="hidden">
+    Boost aktiv: <span id="timer-value">60</span> Sekunden
+  </div>
+
   <p id="auto-status">Auto-Generator: Nicht aktiv</p>
+
+  <!-- Errungenschaften-Bereich -->
+  <div id="achievements">
+    <h2>Errungenschaften</h2>
+    <div id="achievements-list"></div>
+  </div>
+
   <p>Klick auf den süßen Gandon, um Gandons zu sammeln!</p>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
